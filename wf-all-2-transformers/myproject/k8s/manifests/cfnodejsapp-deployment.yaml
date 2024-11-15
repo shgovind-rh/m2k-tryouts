@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    move2kube.konveyor.io/service: cfnodejsapp
+  name: cfnodejsapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      move2kube.konveyor.io/service: cfnodejsapp
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        move2kube.konveyor.io/service: cfnodejsapp
+      name: cfnodejsapp
+    spec:
+      containers:
+        - image: quay.io/myproject/cfnodejsapp:latest
+          imagePullPolicy: Always
+          name: cfnodejsapp
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              ephemeral-storage: "0"
+              memory: "0"
+      restartPolicy: Always
+      securityContext: {}
+status: {}
