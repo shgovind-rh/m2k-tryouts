@@ -1,0 +1,23 @@
+ 2430  2024-11-15 08:42:30 move2kube transform -s src/ -c customizations/
+ 2434  2024-11-15 08:43:41 move2kube transform -s src/ -c customizations/
+ 2437  2024-11-15 08:44:23 move2kube transform -s src/ -c customizations/
+ 2440  2024-11-15 08:53:48 move2kube transform -s src/ -c customizations/
+ 2443  2024-11-15 08:58:08 move2kube transform -s src/ -c customizations/
+ 2446  2024-11-15 08:58:58 move2kube transform -s src/ -c customizations/
+ 2452  2024-11-15 09:12:51 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --overwrite --config ./m2kconfig.yaml 
+ 2455  2024-11-15 09:14:33 move2kube transform -s ./cloud-foundry/ -c ./customizations/
+ 2458  2024-11-15 09:19:33 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2461  2024-11-15 09:25:35 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2466  2024-11-15 11:06:12 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2469  2024-11-15 11:33:50 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2472  2024-11-15 11:36:29 move2kube transform -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2473  2024-11-15 12:40:17 move2kube transform --help
+ 2478  2024-11-15 12:41:53 move2kube transform -o myoutput -s ./cloud-foundry/
+ 2480  2024-11-15 13:01:20 move2kube transform -o custom-dockerfile -s ./cloud-foundry/ -c ./customizations/
+ 2481  2024-11-15 13:27:42 move2kube transform -o external-transformer -s ./cloud-foundry/ -c ./customizations/
+ 2482  2024-11-15 13:30:23 move2kube transform -o external-transformer -s ./cloud-foundry/ -c ./customizations/ --log-level debug
+ 2483  2024-11-15 13:39:13 move2kube transform -o wf-transformer -s ./cloud-foundry/ -c ./customizations/
+ 2484  2024-11-15 13:41:24 move2kube transform -o wf-dockerfile-transformer -s ./cloud-foundry/ -c ./customizations/
+ 2485  2024-11-15 13:44:53 move2kube transform -o all-transformers -s ./cloud-foundry/ -c ./customizations/
+ 2486  2024-11-15 13:50:10 move2kube transform -o wf-all-transformers -s ./cloud-foundry/ -c ./customizations/
+ 2487  2024-11-15 13:51:57 move2kube transform -o wf-all-2-transformers -s ./cloud-foundry/ -c ./customizations/
