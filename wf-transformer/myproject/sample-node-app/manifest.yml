@@ -1,0 +1,7 @@
+---
+applications:
+    -
+        name: wfapp
+        random-route: true
+        memory: 256M
+...
