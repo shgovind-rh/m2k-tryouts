@@ -1,0 +1,12 @@
+resources:
+  - myproject-tekton-triggers-admin-rolebinding.yaml
+  - myproject-tekton-triggers-admin-serviceaccount.yaml
+  - myproject-clone-build-push-pipeline.yaml
+  - myproject-clone-push-serviceaccount.yaml
+  - myproject-git-event-triggerbinding.yaml
+  - myproject-git-repo-eventlistener.yaml
+  - myproject-image-registry-secret.yaml
+  - myproject-run-clone-build-push-triggertemplate.yaml
+  - cfnodejsapp-vcapasenv-secret.yaml
+  - myproject-git-repo-route.yaml
+  - myproject-tekton-triggers-admin-role.yaml

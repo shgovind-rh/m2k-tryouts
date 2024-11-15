@@ -1,0 +1,9 @@
+patches:
+  - path: apps-v1-deployment-cfnodejsapp.yaml
+    target:
+      group: apps
+      version: v1
+      kind: Deployment
+      name: cfnodejsapp
+resources:
+  - ../../base

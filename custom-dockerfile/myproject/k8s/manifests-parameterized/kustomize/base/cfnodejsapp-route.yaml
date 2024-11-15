@@ -1,0 +1,25 @@
+
+---
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+    creationTimestamp: null
+    labels:
+        move2kube.konveyor.io/service: cfnodejsapp
+    name: cfnodejsapp
+spec:
+    host: myproject.com
+    path: /cfnodejsapp
+    port:
+        targetPort: port-8080
+    tls:
+        termination: passthrough
+    to:
+        kind: Service
+        name: cfnodejsapp
+        weight: 1
+status:
+    ingress:
+        - {}
+
+...

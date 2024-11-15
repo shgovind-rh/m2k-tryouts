@@ -1,0 +1,6 @@
+resources:
+  - cfnodejsapp-deployment.yaml
+  - cfnodejsapp-latest-imagestream.yaml
+  - cfnodejsapp-route.yaml
+  - cfnodejsapp-service.yaml
+  - cfnodejsapp-vcapasenv-secret.yaml

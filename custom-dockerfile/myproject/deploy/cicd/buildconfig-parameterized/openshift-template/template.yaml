@@ -1,0 +1,68 @@
+apiVersion: template.openshift.io/v1
+kind: Template
+metadata:
+  name: myproject-template
+  generatename: ""
+  namespace: ""
+  selflink: ""
+  uid: ""
+  resourceversion: ""
+  generation: 0
+  creationtimestamp: "0001-01-01T00:00:00Z"
+  deletiontimestamp: null
+  deletiongraceperiodseconds: null
+  labels: {}
+  annotations: {}
+  ownerreferences: []
+  finalizers: []
+  zzz_deprecatedclustername: ""
+  managedfields: []
+objects:
+  - apiVersion: v1
+    data:
+      WebHookSecretKey: NjI1OGIzMDdkN2JjNzZmMw==
+    kind: Secret
+    metadata:
+      creationTimestamp: null
+      name: myproject-web-hook-cfnodejsapp
+    type: Opaque
+  - apiVersion: build.openshift.io/v1
+    kind: BuildConfig
+    metadata:
+      creationTimestamp: null
+      name: myproject-clone-build-push-cfnodejsapp
+    spec:
+      nodeSelector: null
+      output:
+        to:
+          kind: ImageStreamTag
+          name: cfnodejsapp-latest:latest
+      postCommit: {}
+      resources: {}
+      source:
+        git:
+          ref: main
+          uri: ""
+        sourceSecret:
+          name: myproject-git-repo-generic
+        type: Git
+      strategy:
+        dockerStrategy:
+          dockerfilePath: '<TODO: insert path to the Dockerfile>'
+        type: Docker
+      triggers:
+        - generic:
+            secretReference:
+              name: myproject-web-hook-cfnodejsapp
+          type: Generic
+    status:
+      lastVersion: 0
+  - apiVersion: v1
+    data:
+      ssh-privatekey: PFRPRE86IGluc2VydCB0aGUgcHJpdmF0ZSBzc2gga2V5IGZvciB5b3VyIGdpdCByZXBvPg==
+    kind: Secret
+    metadata:
+      creationTimestamp: null
+      name: myproject-git-repo-generic
+    type: kubernetes.io/ssh-auth
+parameters: []

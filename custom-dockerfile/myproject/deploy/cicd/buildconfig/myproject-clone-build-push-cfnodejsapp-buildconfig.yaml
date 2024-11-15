@@ -1,0 +1,31 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  creationTimestamp: null
+  name: myproject-clone-build-push-cfnodejsapp
+spec:
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: cfnodejsapp-latest:latest
+  postCommit: {}
+  resources: {}
+  source:
+    git:
+      ref: main
+      uri: ""
+    sourceSecret:
+      name: myproject-git-repo-generic
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: '<TODO: insert path to the Dockerfile>'
+    type: Docker
+  triggers:
+    - generic:
+        secretReference:
+          name: myproject-web-hook-cfnodejsapp
+      type: Generic
+status:
+  lastVersion: 0
